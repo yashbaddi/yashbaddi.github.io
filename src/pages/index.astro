@@ -1,16 +1,15 @@
 ---
-
+import Layout from "@/layouts/layout.astro";
+import Navbar from "@/components/navbar/index.astro";
+import Pattern from "@/components/ui/pattern.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Devfolio - Yash">
+  <Navbar />
+  <main
+    aria-label="Main content"
+    class="mx-auto min-h-[calc(100vh-120px)] max-w-3xl"
+  >
+    <Pattern className="h-14" />
+  </main>
+</Layout>
