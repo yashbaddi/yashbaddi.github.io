@@ -1,0 +1,22 @@
+---
+const { href, Icon, title } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  class:list={[
+    "flex h-10 min-w-[120px] items-center justify-center gap-2 rounded-md border border-solid bg-blue-50/10 p-2",
+    "transition-all duration-200 hover:bg-blue-50/20",
+  ]}
+>
+  {
+    Icon && (
+      <span class="flex size-5 items-center justify-center">
+        <Icon className="size-5" />
+      </span>
+    )
+  }
+  <span class="truncate text-sm">{title}</span>
+</a>
