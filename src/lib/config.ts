@@ -1,6 +1,7 @@
 import LinkedinIcon from "@/components/icons/linkedin.astro";
 import XIcon from "@/components/icons/x.astro";
 import GithubIcon from "@/components/icons/github.astro";
+import type { Experience } from "./types";
 
 export const SITE = {
   pageType: "website",
@@ -26,20 +27,91 @@ export const PROFILE_INFO = {
   `,
 } as const;
 
-export const NAV_LINKS = [
+export const EXPERIENCES: Experience[] = [
   {
-    label: "Home",
-    href: "/",
+    company: "Geekwerke",
+    positions: [
+      {
+        title: "Full Stack Software Engineer",
+        year: "06.2023 - present",
+        description: `
+- ♦ Nova Analytics
+- Joined the founding team in its early stages collaborating with two
+  senior engineers to build the product from scratch.
+- Worked on backend data ingestion, validation on an ETL pipeline and
+construction of PostgreSQL materialized views for efficient API access
+to Amazon Sellers KPIs.
+- Developed full-stack features in Python and Node.js (backend) and
+Remix.js (frontend) shaping a modern, performance-oriented web
+dashboard.
+- Integrated Amazon SP API and Amazon Ads API, handling complex
+OAuth flows and third-party API token management.
+- Helped implement system monitoring and alerting with Prometheus
+and Grafana, gaining hands-on exposure to observability and uptime
+tracking.
+- ♦ Quintype Client Migrations
+- Developed Pipelines for migrating client data from MySQL to JSON
+Lines Format.
+            `,
+        skills: [
+          "Node.js",
+          "Redis",
+          "Docker",
+          "PostgreSQL",
+          "MySQL",
+          "TypeScript",
+          "React",
+          "Tailwind CSS",
+        ],
+      },
+    ],
   },
   {
-    label: "Articles",
-    href: "/articles",
+    company: "Aequs SEZ",
+    positions: [
+      {
+        title: "Intern",
+        year: "07.2019 - 08.2019",
+        description: `
+- ♦ Sanchari Aequs 
+- Built an Android Application and a Tracking device to
+track buses using Arduino, GPS module to track the location and GSM
+Module to transmit the data that has been sent to Google Firebase.
+            `,
+        skills: [
+          "Android App Development",
+          "Arduino",
+          "GPS Module",
+          "GSM Module",
+          "Google Firebase",
+        ],
+      },
+    ],
   },
   {
-    label: "Projects",
-    href: "/projects",
+    company: "Education",
+    positions: [
+      {
+        title: "Geekskool",
+        year: "01.2023 - 06.2023",
+        description: `
+- ♦ Completed an intensive tech bootcamp focused on full-stack development.
+- ♦ Built projects like a LISP interpreter, custom OAuth provider, HTTP server, and an Express.js clone and a full-featured food delivery app.
+            `,
+        skills: ["React", "Node.js", "Express.js", "PostgreSQL"],
+      },
+      {
+        title: "Vishveshwaraiah Technological University",
+        year: "06.2016 - 06.2020",
+        description: `
+- ♦ Bachelor of Engineering in Electronics and Communication.
+
+            `,
+        skills: ["Electronics", "Communication Systems", "Computer Networks"],
+      },
+    ],
   },
-] as const;
+];
 
 export const SOCIAL_LINKS = [
   {
