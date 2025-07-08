@@ -1,0 +1,21 @@
+---
+import Box from "@/components/box/index.astro";
+import BoxTitle from "@/components/box/title.astro";
+import BoxHeader from "@/components/box/header.astro";
+import BoxContent from "@/components/box/content.astro";
+
+import { PROFILE_INFO } from "@/lib/config";
+import MarkdownRenderer from "../ui/markdown-renderer.astro";
+---
+
+<Box>
+  <BoxHeader>
+    <BoxTitle> About </BoxTitle>
+  </BoxHeader>
+  <BoxContent>
+    <MarkdownRenderer
+      className="text-sm leading-7 font-medium"
+      content={PROFILE_INFO.about}
+    />
+  </BoxContent>
+</Box>

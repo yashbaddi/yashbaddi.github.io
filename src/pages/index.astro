@@ -1,0 +1,27 @@
+---
+import Layout from "@/layouts/layout.astro";
+import Pattern from "@/components/ui/pattern.astro";
+
+import Navbar from "@/components/sections/navbar/index.astro";
+import Profile from "@/components/sections/profile.astro";
+import About from "@/components/sections/about.astro";
+import TechStack from "@/components/sections/tech-stack.astro";
+import Experience from "@/components/sections/experience/index.astro";
+---
+
+<Layout title="Devfolio - Yash">
+  <Navbar />
+  <main
+    aria-label="Main content"
+    class="mx-auto min-h-[calc(100vh-120px)] max-w-3xl"
+  >
+    <Pattern className="h-14" />
+    <Profile />
+    <Pattern />
+    <About />
+    <Pattern />
+    <TechStack />
+    <Pattern />
+    <Experience />
+  </main>
+</Layout>
