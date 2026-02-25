@@ -1,0 +1,42 @@
+---
+import Box from "@/components/box/index.astro";
+import BoxHeader from "@/components/box/header.astro";
+import BoxTitle from "@/components/box/title.astro";
+import BoxContent from "@/components/box/content.astro";
+---
+
+<Box>
+  <BoxHeader>
+    <BoxTitle>Articles</BoxTitle>
+  </BoxHeader>
+  <BoxContent>
+    <div class="flex flex-col items-center justify-center py-20 text-center">
+      <div class="mb-4 rounded-full bg-neutral-100 p-3 dark:bg-neutral-800">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="text-neutral-400 dark:text-neutral-500"
+        >
+          <path
+            d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"
+          ></path>
+          <path d="M8 7h6"></path>
+          <path d="M8 11h8"></path>
+        </svg>
+      </div>
+      <p class="text-base font-medium text-neutral-600 dark:text-neutral-300">
+        No articles published yet
+      </p>
+      <p class="mt-1 text-sm text-neutral-400 dark:text-neutral-500">
+        I'm working on sharing my thoughts and experiences here soon!
+      </p>
+    </div>
+  </BoxContent>
+</Box>
