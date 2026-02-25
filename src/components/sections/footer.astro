@@ -1,0 +1,58 @@
+---
+import { SITE, SOCIAL_LINKS } from "@/lib/config";
+---
+
+<footer class="mt-auto w-full">
+  <div class="border-t border-neutral-200 dark:border-neutral-800">
+    <!-- Top Pattern-like separator -->
+    <div
+      class="screen-line-after relative flex h-4 w-full bg-[image:radial-gradient(var(--pattern-foreground)_2px,_transparent_2px)] bg-[size:15px_15px] [--pattern-foreground:var(--color-black)]/5 dark:[--pattern-foreground:var(--color-white)]/5"
+    >
+    </div>
+
+    <div
+      class="flex flex-col items-center justify-between gap-6 px-6 py-10 md:flex-row md:py-14"
+    >
+      <div class="flex flex-col gap-2 text-center md:text-left">
+        <h2 class="text-sm font-bold tracking-tight text-foreground">
+          {SITE.author}
+        </h2>
+        <p class="text-xs font-medium text-neutral-500 dark:text-neutral-400">
+          Software Engineer
+        </p>
+        <p
+          class="mt-2 font-mono text-[10px] uppercase tracking-widest text-neutral-400 dark:text-neutral-600"
+        >
+          © {new Date().getFullYear()}
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center gap-4 md:items-end">
+        <div class="flex items-center gap-5">
+          {
+            SOCIAL_LINKS.map((link) => (
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group relative flex h-9 w-9 items-center justify-center rounded-lg border border-neutral-200 bg-white/50 text-neutral-500 transition-all hover:border-primary/50 hover:bg-white hover:text-primary dark:border-neutral-800 dark:bg-neutral-900/50 dark:hover:border-primary/50 dark:hover:bg-neutral-900"
+                aria-label={link.name}
+              >
+                <link.icon class="size-4 transition-transform group-hover:scale-110" />
+                <span class="absolute -top-8 scale-0 rounded bg-neutral-900 px-2 py-1 text-[10px] text-white transition-all group-hover:scale-100 dark:bg-neutral-100 dark:text-neutral-900">
+                  {link.name}
+                </span>
+              </a>
+            ))
+          }
+        </div>
+        <a
+          href="mailto:yashbaddi29@gmail.com"
+          class="text-xs font-medium text-neutral-600 underline underline-offset-4 hover:text-primary dark:text-neutral-300"
+        >
+          yashbaddi29@gmail.com
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
