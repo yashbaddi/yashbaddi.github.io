@@ -1,42 +1,75 @@
 ---
+import { getCollection, type CollectionEntry } from "astro:content";
 import Box from "@/components/box/index.astro";
 import BoxHeader from "@/components/box/header.astro";
 import BoxTitle from "@/components/box/title.astro";
 import BoxContent from "@/components/box/content.astro";
+
+const articles: CollectionEntry<"articles">[] = await getCollection("articles");
+const sortedArticles: CollectionEntry<"articles">[] = articles.sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
 ---
 
 <Box>
   <BoxHeader>
     <BoxTitle>Articles</BoxTitle>
   </BoxHeader>
-  <BoxContent>
-    <div class="flex flex-col items-center justify-center py-20 text-center">
-      <div class="mb-4 rounded-full bg-neutral-100 p-3 dark:bg-neutral-800">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="text-neutral-400 dark:text-neutral-500"
-        >
-          <path
-            d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"
-          ></path>
-          <path d="M8 7h6"></path>
-          <path d="M8 11h8"></path>
-        </svg>
-      </div>
-      <p class="text-base font-medium text-neutral-600 dark:text-neutral-300">
-        No articles published yet
-      </p>
-      <p class="mt-1 text-sm text-neutral-400 dark:text-neutral-500">
-        I'm working on sharing my thoughts and experiences here soon!
-      </p>
-    </div>
+  <BoxContent className="px-0">
+    {
+      sortedArticles.length > 0 ? (
+        <div class="flex flex-col">
+          {sortedArticles.map((article) => (
+            <a
+              href={`/articles/${article.id}`}
+              class="group flex items-center justify-between border-b border-neutral-100 dark:border-neutral-800 px-4 py-4 transition-colors hover:bg-neutral-50 dark:hover:bg-neutral-900 last:border-0"
+            >
+              <div class="flex flex-col gap-1">
+                <h3 class="font-medium text-foreground transition-colors group-hover:text-primary">
+                  {article.data.title}
+                </h3>
+                <p class="text-xs text-neutral-500 dark:text-neutral-400 line-clamp-1">
+                  {article.data.description}
+                </p>
+              </div>
+              <time class="text-[10px] tabular-nums text-neutral-400 dark:text-neutral-500 whitespace-nowrap ml-4">
+                {article.data.pubDate.toLocaleDateString("en-US", {
+                  month: "numeric",
+                  day: "numeric",
+                  year: "2-digit",
+                })}
+              </time>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <div class="flex flex-col items-center justify-center py-20 text-center">
+          <div class="mb-4 rounded-full bg-neutral-100 p-3 dark:bg-neutral-800">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="text-neutral-400 dark:text-neutral-500"
+            >
+              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z" />
+              <path d="M8 7h6" />
+              <path d="M8 11h8" />
+            </svg>
+          </div>
+          <p class="text-base font-medium text-neutral-600 dark:text-neutral-300">
+            No articles published yet
+          </p>
+          <p class="mt-1 text-sm text-neutral-400 dark:text-neutral-500">
+            I'm working on sharing my thoughts and experiences here soon!
+          </p>
+        </div>
+      )
+    }
   </BoxContent>
 </Box>
