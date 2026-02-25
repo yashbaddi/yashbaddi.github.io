@@ -6,6 +6,6 @@ interface Props {
 const { className } = Astro.props;
 ---
 
-<section class:list={[className]}>
+<section class:list={["md:border-x", className]}>
   <slot />
 </section>
