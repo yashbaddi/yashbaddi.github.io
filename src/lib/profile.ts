@@ -96,7 +96,10 @@ Module to transmit the data that has been sent to Google Firebase.
         year: "01.2023 - 06.2023",
         description: `
 - ♦ Completed an intensive tech bootcamp focused on full-stack development.
-- ♦ Built projects like a LISP interpreter, custom OAuth provider, HTTP server, and an Express.js clone and a full-featured food delivery app.
+- ♦ Created a LISP interpreter demonstrating understanding of language design.
+- ♦ Built a custom OAuth provider implementing authentication flows
+- ♦ Developed a HTTP server from scratch handling request lifecycle
+- ♦ Built a full-stack food delivery application
             `,
         skills: ["React", "Node.js", "Express.js", "PostgreSQL"],
       },
