@@ -9,10 +9,11 @@ import {
   Python,
   React,
   Redis,
-  RemixDarkWordmark,
-  ShadcnUI,
   TailwindCSS,
   TypeScript,
+  Go,
+  Kafka,
+  Grafana,
 } from "developer-icons";
 
 export const TECH_STACK = [
@@ -32,6 +33,11 @@ export const TECH_STACK = [
     title: "Node.js",
     href: "https://nodejs.org/",
     icon: NodeJs,
+  },
+  {
+    title: "Go",
+    href: "https://go.dev/",
+    icon: Go,
   },
 
   // Databases & Caching
@@ -67,6 +73,12 @@ export const TECH_STACK = [
     href: "https://aws.amazon.com/",
     icon: AWS,
   },
+  {
+    title: "Kafka",
+    href: "https://kafka.apache.org/",
+    icon: Kafka,
+  },
+
   // Frontend Technologies
   {
     title: "React",
@@ -74,25 +86,14 @@ export const TECH_STACK = [
     icon: React,
   },
   {
-    title: "Remix.js",
-    href: "https://remix.run/",
-    icon: RemixDarkWordmark,
-  },
-  {
     title: "Tailwind CSS",
     href: "https://tailwindcss.com/",
     icon: TailwindCSS,
   },
+  // Monitoring
   {
-    title: "shadcn/ui",
-    href: "https://ui.shadcn.com/",
-    icon: ShadcnUI,
-  },
-
-  // Miscellaneous
-  {
-    title: "Figma",
-    href: "https://www.figma.com/",
-    icon: Figma,
+    title: "Grafana",
+    href: "https://grafana.com/",
+    icon: Grafana,
   },
 ];
