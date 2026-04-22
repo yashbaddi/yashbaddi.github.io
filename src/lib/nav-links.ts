@@ -9,6 +9,6 @@ export const NAV_LINKS = [
   },
   {
     label: "Projects",
-    href: "/projects",
+    href: "https://github.com/yashbaddi",
   },
 ] as const;
