@@ -19,25 +19,26 @@ import {
 export const TECH_STACK = [
   // Programming Languages
   {
-    title: "TypeScript",
-    href: "https://www.typescriptlang.org/",
-    icon: TypeScript,
+    title: "Go",
+    href: "https://go.dev/",
+    icon: Go,
   },
   {
     title: "Python",
     href: "https://www.python.org/",
     icon: Python,
   },
+  {
+    title: "TypeScript",
+    href: "https://www.typescriptlang.org/",
+    icon: TypeScript,
+  },
+
   // Backend Technologies
   {
     title: "Node.js",
     href: "https://nodejs.org/",
     icon: NodeJs,
-  },
-  {
-    title: "Go",
-    href: "https://go.dev/",
-    icon: Go,
   },
 
   // Databases & Caching

@@ -22,7 +22,7 @@ export const PROFILE_INFO = {
   email: "yashbaddi29@gmail.com",
   about: `
   Hey there! 👋 I'm Yash, a highly skilled developer with a strong foundation in core computer science concepts. My journey in the tech world has been nothing short of exhilarating.
-  ⚡️I am into the dynamic realm of web development, mastering both  backend and frontend technologies with a focus on Node.js and Postgres Database. From conceptualization to deployment, I've brought numerous projects to life, showcasing my commitment to clean, efficient, and scalable code.
+  ⚡️I am into the dynamic realm of Tech and development, mastering backend technologies. From conceptualization to deployment, I've brought numerous projects to life, showcasing my commitment to clean, efficient, and scalable code.
   Let's code the future together! 💻✨
   `,
 } as const;
@@ -38,12 +38,10 @@ export const EXPERIENCES: Experience[] = [
 - ♦ Nova Analytics
 - Joined the founding team in its early stages collaborating with two
   senior engineers to build the product from scratch.
-- Worked on backend data ingestion, validation on an ETL pipeline and
+- Worked on backend data ingestion, validation on an ELT pipeline and
 construction of PostgreSQL materialized views for efficient API access
 to Amazon Sellers KPIs.
-- Developed full-stack features in Python and Node.js (backend) and
-Remix.js (frontend) shaping a modern, performance-oriented web
-dashboard.
+- Developed scalable REST APIs to power data-intensive dashboards.
 - Integrated Amazon SP API and Amazon Ads API, handling complex
 OAuth flows and third-party API token management.
 - Helped implement system monitoring and alerting with Prometheus
@@ -54,11 +52,11 @@ tracking.
 Lines Format.
             `,
         skills: [
-          "Node.js",
+          "Go",
           "Redis",
-          "Docker",
           "PostgreSQL",
           "MySQL",
+          "Docker",
           "TypeScript",
           "React",
           "Tailwind CSS",
